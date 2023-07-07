@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from . models import Destination
 
 # Create your views here.
 def home(request):
-    return render(request, 'webpages/home.html')
+    dests = Destination.objects.all()
+    return render(request, 'webpages/home.html', {'dests': dests})
 
 def about(request):
     return render(request, 'webpages/about.html')
