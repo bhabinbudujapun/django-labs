@@ -2,5 +2,13 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    content = 'Welcome, to Django world'
-    return render(request, 'index.html', content)
+    return render(request, 'webpages/home.html')
+
+def about(request):
+    return render(request, 'webpages/about.html')
+
+def services(request):
+    return render(request, 'webpages/services.html')
+
+def contact(request):
+    return render(request, 'webpages/contact.html')
