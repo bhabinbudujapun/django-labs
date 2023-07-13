@@ -14,3 +14,10 @@ def services(request):
 
 def contact(request):
     return render(request, 'webpages/contact.html')
+
+def signup(request):
+    return render(request, 'webpages/signup.html')
+
+def login(request):
+    return render(request, 'webpages/login.html')
+
