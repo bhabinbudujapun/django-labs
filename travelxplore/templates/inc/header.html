@@ -10,21 +10,19 @@
           <div
             class="header_content_inner d-flex flex-row align-items-end justify-content-start">
             <div class="logo">
-              <a href="http://127.0.0.1:8000/">TravelXplore</a>
+              <a href="{% url 'home' %}">TravelXplore</a>
             </div>
             <nav class="main_nav">
               <ul
                 class="d-flex flex-row align-items-start justify-content-start">
-                <li class="active">
-                  <a href="http://127.0.0.1:8000/">Home</a>
-                </li>
-                <li><a href="about">About us</a></li>
-                <li><a href="services">Services</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="signup">Register</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'services' %}">Services</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
               </ul>
             </nav>
-            <div class="header_phone ml-auto">Call us: 00-56 445 678 3</div>
 
             <!-- Hamburger -->
 
@@ -36,7 +34,7 @@
       </div>
     </div>
   </div>
-  <div
+  <!-- <div
     class="header_social d-flex flex-row align-items-center justify-content-start">
     <ul class="d-flex flex-row align-items-start justify-content-start">
       <li>
@@ -49,7 +47,7 @@
         <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
       </li>
     </ul>
-  </div>
+  </div> -->
 </header>
 
 <!-- Home -->
@@ -80,7 +78,7 @@
       </div>
     </div>
 
-    <div class="home_page_nav">
+    <!-- <div class="home_page_nav">
       <ul class="d-flex flex-column align-items-end justify-content-end">
         <li>
           <a href="#" data-scroll-to="#destinations">Offers<span>01</span></a>
@@ -94,7 +92,7 @@
           <a href="#" data-scroll-to="#news">Latest<span>03</span></a>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
 </div>
 

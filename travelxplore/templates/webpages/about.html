@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} {% load static %} 
+{% block title %} About Us {% endblock %}
+
+{% block content %}
 
 <!-- About -->
 <div class="about">
@@ -13,24 +16,23 @@
       <div class="col-lg-6">
         <div class="about_content">
           <div class="text_highlight">
-            Pellentesque sit amet elementum ccumsan sit amet mattis eget,
-            tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit.
+            Welcome to TravelXplore, your ultimate destination for discovering
+            the world's most captivating travel experiences.
           </div>
           <div class="about_text">
             <p>
-              Pellentesque sit amet elementum ccumsan sit amet mattis eget,
-              tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet
-              ante, sollicitudin volutpat quam. Vestibulum posuere malesuada
-              ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus
-              varius, auctor nisi sit amet, consectetur mauris. Curabitur
-              sodales semper est, vel faucibus urna laoreet vel. Ut justo diam,
-              sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus
-              vel ultricies consequat.
+              At TravelXplore, we believe that travel has the power to enrich
+              our lives, broaden our horizons, and create lasting memories. We
+              are a passionate team of travel enthusiasts who are dedicated to
+              providing you with comprehensive information, enticing images, and
+              competitive prices for your dream destinations. Our mission is to
+              inspire and guide you on your journey to unforgettable
+              destinations. Whether you're a seasoned globetrotter or a
+              first-time adventurer, TravelXplore is here to ignite your
+              wanderlust and help you plan your next extraordinary trip.
             </p>
           </div>
-          <div class="button about_button"><a href="#">read more</a></div>
+          <!-- <div class="button about_button"><a href="#">read more</a></div> -->
         </div>
       </div>
       <div class="col-lg-6">
@@ -54,7 +56,7 @@
             <img src="{% static 'images/mountain.svg' %}" alt="" />
           </div>
           <div class="milestone_counter" data-end-value="17">0</div>
-          <div class="milestone_text">Online Courses</div>
+          <div class="milestone_text">Destinations</div>
         </div>
       </div>
 
@@ -65,7 +67,7 @@
             <img src="{% static 'images/island.svg' %}" alt="" />
           </div>
           <div class="milestone_counter" data-end-value="213">0</div>
-          <div class="milestone_text">Students</div>
+          <div class="milestone_text">Travels</div>
         </div>
       </div>
 
@@ -76,7 +78,7 @@
             <img src="{% static 'images/camera.svg' %}" alt="" />
           </div>
           <div class="milestone_counter" data-end-value="11923">0</div>
-          <div class="milestone_text">Teachers</div>
+          <div class="milestone_text">Photos</div>
         </div>
       </div>
 
@@ -87,7 +89,7 @@
             <img src="{% static 'images/boat.svg' %}" alt="" />
           </div>
           <div class="milestone_counter" data-end-value="15">0</div>
-          <div class="milestone_text">Countries</div>
+          <div class="milestone_text">Services</div>
         </div>
       </div>
     </div>
@@ -124,8 +126,9 @@
             <div class="why_title">Fast Services</div>
             <div class="why_text">
               <p>
-                Pellentesque sit amet elementum ccumsan sit amet mattis eget,
-                tristique at leo.
+                "At TravelXplore, we understand the value of your time. That's
+                why we pride ourselves on providing swift and efficient
+                services."
               </p>
             </div>
           </div>
@@ -146,8 +149,9 @@
             <div class="why_title">Great Team</div>
             <div class="why_text">
               <p>
-                Pellentesque sit amet elementum ccumsan sit amet mattis eget,
-                tristique at leo.
+                "With our expertise and genuine enthusiasm for travel, you can
+                trust that we'll go above and beyond to make your travel
+                experience extraordinary."
               </p>
             </div>
           </div>
@@ -168,8 +172,8 @@
             <div class="why_title">Best Deals</div>
             <div class="why_text">
               <p>
-                Pellentesque sit amet elementum ccumsan sit amet mattis eget,
-                tristique at leo.
+                "At TravelXplore, we are dedicated to helping you find the best
+                travel deals that suit your preferences and budget."
               </p>
             </div>
           </div>
@@ -191,81 +195,6 @@
     </div>
     <div class="row team_row">
       <!-- Team Item -->
-      <!-- <div class="col-xl-3 col-md-6 team_col">
-        <div
-          class="team_item d-flex flex-column align-items-center justify-content-start text-center">
-          <div class="team_image">
-            <img src="{% static 'images/team_1.jpg' %}" alt="" />
-          </div>
-          <div class="team_content">
-            <div class="team_title"><a href="#">Margaret Smith</a></div>
-            <div class="team_text">
-              <p>
-                Pellentesque sit amet elementum ccumsan sit amet mattis eget,
-                tristique at leo. Vivamus massa.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- Team Item -->
-      <!-- <div class="col-xl-3 col-md-6 team_col">
-        <div
-          class="team_item d-flex flex-column align-items-center justify-content-start text-center">
-          <div class="team_image">
-            <img src="{% static 'images/team_2.jpg' %}" alt="" />
-          </div>
-          <div class="team_content">
-            <div class="team_title"><a href="#">James Williams</a></div>
-            <div class="team_text">
-              <p>
-                Pellentesque sit amet elementum ccumsan sit amet mattis eget,
-                tristique at leo. Vivamus massa.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- Team Item -->
-      <!-- <div class="col-xl-3 col-md-2 team_col">
-        <div
-          class="team_item d-flex flex-column align-items-center justify-content-start text-center">
-          <div class="team_image">
-            <img src="{% static 'images/team_3.jpg' %}" alt="" />
-          </div>
-          <div class="team_content">
-            <div class="team_title"><a href="#">Michael James</a></div>
-            <div class="team_text">
-              <p>
-                Pellentesque sit amet elementum ccumsan sit amet mattis eget,
-                tristique at leo. Vivamus massa.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- Team Item -->
-      <!-- <div class="col-xl-3 col-md-2 team_col">
-        <div
-          class="team_item d-flex flex-column align-items-center justify-content-start text-center">
-          <div class="team_image">
-            <img src="{% static 'images/team_4.jpg' %}" alt="" />
-          </div>
-          <div class="team_content">
-            <div class="team_title"><a href="#">Noah Smith</a></div>
-            <div class="team_text">
-              <p>
-                Pellentesque sit amet elementum ccumsan sit amet mattis eget,
-                tristique at leo. Vivamus massa.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
       <div class="col-xl-6 col-md-4 team_col">
         <div
           class="team_item d-flex flex-column align-items-center justify-content-start text-center">
@@ -273,11 +202,12 @@
             <img src="{% static 'images/team_3.jpg' %}" alt="" />
           </div>
           <div class="team_content">
-            <div class="team_title"><a href="#">Bhabin B. Pun</a></div>
+            <div class="team_title"><a href="#">Bhabin Buduja Pun</a></div>
             <div class="team_text">
               <p>
-                Pellentesque sit amet elementum ccumsan sit amet mattis eget,
-                tristique at leo. Vivamus massa.
+                "With expertise in web development and a passion for creating
+                innovative solutions, our developer is dedicated to providing
+                you with a user-friendly platform."
               </p>
             </div>
           </div>
@@ -293,8 +223,8 @@
             <div class="team_title"><a href="#">Seby Chaudhary</a></div>
             <div class="team_text">
               <p>
-                Pellentesque sit amet elementum ccumsan sit amet mattis eget,
-                tristique at leo. Vivamus massa.
+                "Our talented content writer is the wordsmith responsible for
+                crafting engaging and informative travel content."
               </p>
             </div>
           </div>

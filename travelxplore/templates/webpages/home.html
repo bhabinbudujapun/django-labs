@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} {% load static %} {% block title %} Home {% endblock%}
+{% block content %}
 
 <!-- Intro -->
 <div class="intro">
@@ -80,8 +81,10 @@
     <div class="row destinations_row">
       <div class="col">
         <div class="destinations_container item_grid">
-          {% for dest in dests %}
           <!-- Destination -->
+
+          {% for dest in dests %}
+
           <div class="destination item">
             <div class="destination_image">
               <img src="{{dest.d_img.url}}" alt="" />
@@ -93,7 +96,7 @@
             </div>
             <div class="destination_content">
               <div class="destination_title text-uppercase">
-                <a href="destinations.html">{{dest.d_name}}</a>
+                <a href="{% url 'destinations' %}">{{dest.d_name}}</a>
               </div>
               <div class="destination_subtitle">
                 <p>{{dest.d_desc}}</p>
@@ -133,14 +136,14 @@
             <!-- Slide -->
             <div class="owl-item text-center">
               <div class="testimonial">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                lobortis dolor. Cras placerat lectus a posuere aliquet.
-                Curabitur quis vehicula odio.
+                "TravelXplore made my trip planning a breeze! The detailed
+                destination guides and stunning images helped me choose the
+                perfect vacation spot."
               </div>
               <div class="testimonial_author">
                 <div
                   class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-                  <div>john turner,</div>
+                  <div>- Ashbel Ashish,</div>
                   <div>client</div>
                 </div>
               </div>
@@ -149,14 +152,14 @@
             <!-- Slide -->
             <div class="owl-item text-center">
               <div class="testimonial">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                lobortis dolor. Cras placerat lectus a posuere aliquet.
-                Curabitur quis vehicula odio.
+                "Thanks to TravelXplore, I discovered unique destinations I
+                wouldn't have found otherwise. The prices were unbeatable, and
+                the service was exceptional!"
               </div>
               <div class="testimonial_author">
                 <div
                   class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-                  <div>john turner,</div>
+                  <div>- Ashim,</div>
                   <div>client</div>
                 </div>
               </div>
@@ -165,14 +168,14 @@
             <!-- Slide -->
             <div class="owl-item text-center">
               <div class="testimonial">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                lobortis dolor. Cras placerat lectus a posuere aliquet.
-                Curabitur quis vehicula odio.
+                "I highly recommend TravelXplore to anyone looking for reliable
+                travel information and inspiration. It's my go-to platform for
+                all my travel needs."
               </div>
               <div class="testimonial_author">
                 <div
                   class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-                  <div>john turner,</div>
+                  <div>- Rojan,</div>
                   <div>client</div>
                 </div>
               </div>
