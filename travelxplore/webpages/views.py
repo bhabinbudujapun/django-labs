@@ -24,3 +24,5 @@ def contact(request):
 def destinations(request):
     dests = Destination.objects.all().order_by('d_price')
     return render(request, 'webpages/destinations.html', {'dests': dests})
+
+

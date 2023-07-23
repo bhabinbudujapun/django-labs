@@ -2,11 +2,28 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
 from django.contrib import messages, auth
+from django.contrib.auth.decorators import login_required
+from webpages.models import Destination
+# from . import models
 
 # Create your views here.
 
 
 def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            messages.success(request, 'Login successful')
+            return redirect('dashboard')
+        else:
+            messages.warning(request, 'Invalid username or password')
+            return redirect('login')
+
     return render(request, 'accounts/login.html')
 
 
@@ -27,7 +44,8 @@ def register(request):
                     messages.warning(request, 'email already exists')
                     return redirect('register')
                 else:
-                    user = User.objects.create_user(username=username, email=email, password=password)
+                    user = User.objects.create_user(
+                        username=username, email=email, password=password)
                     user.save()
                     messages.success(request, 'Account created successfully')
                     return redirect('login')
@@ -40,8 +58,11 @@ def register(request):
 
 def logout_user(request):
     logout(request)
-    redirect('home')
+    return redirect('home')
 
 
+@login_required(login_url='login')
 def dashboard(request):
-    pass
+    dests = Destination.objects.all().order_by('d_price')
+    return render(request, 'accounts/dashboard.html', {'dests': dests})
+    # return render(request, 'accounts/dashboard.html')
